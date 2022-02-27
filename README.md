@@ -39,8 +39,10 @@ This is the canvas size in pixels. Changing this shouldn't mess anything up, but
 This is the size of the pixels from the minecraft skin translated onto the canvas (FOR THE HEAD). Making the value inside bigger makes the actual pixels smaller and vice versa.
 ## BODY_PIXEL_SIZE
 This does the same as PIXEL_SIZE, but for the body.
-## TOP_LAYER_OFFSET
-This is the offset for the top layer to be moved up. The default value is one PIXEL_SIZE, but it can be changed if it looks wrong
+## TOP_LAYER_OFFSET_X
+This is the offset for the top layer to be moved left/right. The default value is one PIXEL_SIZE, but it can be changed if it looks wrong.
+## TOP_LAYER_OFFSET_Y
+This is the offset for the top layer to be moved up/down. The default value is one PIXEL_SIZE, but it can be changed if it looks wrong.
 
 # Other options
 You shouldn't need to change these. If you feel the need, and something is actually wrong with the script: please feel free to make a PR :).

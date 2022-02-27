@@ -17,7 +17,8 @@ TOP_LAYER = True
 CANVAS_SIZE = (1000, 1000)
 PIXEL_SIZE = round(CANVAS_SIZE[0] / 20)
 BODY_PIXEL_SIZE  = round(CANVAS_SIZE[0] / 35)
-TOP_LAYER_OFFSET = PIXEL_SIZE
+TOP_LAYER_OFFSET_X = PIXEL_SIZE
+TOP_LAYER_OFFSET_Y = -PIXEL_SIZE
 
 # DON'T CHANGE
 HEAD_FRONT_BOUNDS = (8, 8, 15, 16)
@@ -65,8 +66,8 @@ def generate():
         head_front_top = head_front_top.resize(head_front_size, resample=Image.NONE)
 
         head_front_top_loc = (
-            round(head_front_loc[0] + TOP_LAYER_OFFSET),
-            round(head_front_loc[1] - PIXEL_SIZE)
+            round(head_front_loc[0] + TOP_LAYER_OFFSET_X),
+            round(head_front_loc[1] + TOP_LAYER_OFFSET_Y)
         )
 
         skin_canvas.paste(head_front_top, head_front_top_loc, head_front_top)
@@ -93,7 +94,7 @@ def generate():
         head_left_top = head_left_top.resize(head_left_size, resample=Image.NONE)
 
         head_left_top_loc = [
-            round(head_left_loc[0] + TOP_LAYER_OFFSET),
+            round(head_left_loc[0] + TOP_LAYER_OFFSET_X),
             round(head_left_loc[1])
         ]
 
