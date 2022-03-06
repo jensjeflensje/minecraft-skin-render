@@ -15,6 +15,7 @@ TOP_LAYER = True
 
 # SEMI-CHANGABLE
 CANVAS_SIZE = (1000, 1000)
+BLUR_COLOR = (0, 0, 0)
 PIXEL_SIZE = round(CANVAS_SIZE[0] / 20)
 BODY_PIXEL_SIZE  = round(CANVAS_SIZE[0] / 35)
 # Can be set to PIXEL_SIZE
@@ -237,7 +238,7 @@ def generate():
 
 
     if BLUR:
-        shadow = Image.new("RGBA", skin_canvas.size, color=(0, 0, 0))
+        shadow = Image.new("RGBA", skin_canvas.size, color=BLUR_COLOR)
 
         canvas.paste(shadow, (0, 0), skin_canvas)
         for _ in range(250):
