@@ -246,10 +246,10 @@ def generate():
 
     canvas.paste(skin_canvas, (0, 0), skin_canvas)
 
-    canvas.save("result.png")
-
     print("Done")
+
+    return canvas
 
 
 if __name__ == "__main__":
-    generate()
+    generate().save("result.png")
